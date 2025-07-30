@@ -5,6 +5,7 @@ import userRouter from './Routes/user.js';
 import contactRouter from './Routes/contact.js';
 import { config } from 'dotenv';
 const app = express();
+const port = process.env.PORT || 5000;
 
 // Middleware
 app.use(bodyParser.json());
@@ -22,7 +23,6 @@ app.get("/", (req, res) => {
 });
 
 // Port
-const port = process.env.PORT || 5000;
 
 // MongoDB Connection + Server Start
 mongoose
